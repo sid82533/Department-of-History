@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+	<meta content="text/html"; charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Newstyle.css">
+	<script>
+		var sum=0;
+			function fn_play(){
+				document.getElementById("que").style.display='block';
+			}
+			function fn_quiz(){
+				var ans;
+				ans=document.querySelector('input[name="q1"]:checked').value;
+					if (ans=="Egypt"){
+						sum=sum+2;}
+						else{
+							sum=sum-1;}
+				ans=document.querySelector('input[name="q2"]:checked').value;
+					if (ans=="776_BC"){
+						sum=sum+2;}
+						else{
+							sum=sum-1;}		
+				ans=document.querySelector('input[name="q3"]:checked').value;
+					if (ans=="1498"){
+						sum=sum+2;}
+						else{
+							sum=sum-1;}		
+				ans=document.querySelector('input[name="q4"]:checked').value;
+					if (ans=="1215"){
+						sum=sum+2;}
+						else{
+							sum=sum-1;	}	
+				alert("Your Score is" +sum);
+				/*document.getElementById("myform").reset();		*/
+				document.getElementById("xform").reset();
+						
+			}
+	
+	</script>
+	
+	<title>QUIZ||SXDH</title>
+ </head>
+ <body>
+	<div id="container">
+	<!--header-->
+    <div id="header">
+    	<div id="logo"></div>
+        <div id="info"><h1>St. Xavier's College, Mumbai(Autonomous)</h1>
+        <h1 style="font-family:Macondo Swash Caps; font-size:36px">Department Of History</h1>
+	</div>
+	</div></div>
+	<div id="form1">
+	<form id="myform">
+		<h3>&nbsp;&nbsp;&nbsp;&nbsp;NAME:&nbsp;&nbsp;&nbsp;<INPUT type="text" id="txt_name" placeholder="Enter Name"></h3>
+		<h3>&nbsp;&nbsp;&nbsp;&nbsp;AGE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="text" id="txt_age" placeholder="Enter Age"></h3>
+		<h3>&nbsp;&nbsp;&nbsp;&nbsp;E-MAIL:<INPUT type="text" id="txt_email" placeholder="Enter E-Mail id">	</h3>
+		<p><h3>&nbsp;&nbsp;&nbsp;&nbsp;UID No.:&nbsp;<INPUT type="text" id="txt_email" placeholder="Enter UID number"></p></h3><br><br><br>
+		<br><button type="button" onClick="fn_play()" id="btn_1">Play Quiz</button>
+	</form></div>
+		<div id="que" style="background:#FF9; color:#300; display:none">
+	<form id="xform">
+		<h2 style="text-align:center"><p>Welcome to the Quiz!!</p><h2>
+		<h3><i>Select any one answer from the choices</i></h3>
+		<h4>1.Which of the following is called 'Gift of Nile'?<br>
+			<INPUT type="radio" name="q1" value="India" id="Q_1">India<br>
+			<INPUT type="radio" name="q1" value="China" id="Q_1">China<br>
+			<INPUT type="radio" name="q1" value="Egypt" id="Q_1">Egypt<br>
+			<INPUT type="radio" name="q1" value="Nigeria" id="Q_1">Nigeria<br>
+		2.When were the first olympics held?<br>
+			<INPUT type="radio" name="q2" value="776_BC" id="Q_2">776 BC<br>
+			<INPUT type="radio" name="q2" value="780_BC" id="Q_2">780 BC<br> 
+			<INPUT type="radio" name="q2" value="540_BC" id="Q_2">540 BC<br>
+			<INPUT type="radio" name="q2" value="600_BC" id="Q_2">600 BC<br>
+		3.Vasco da Gama reached India in the year?<br>
+			<INPUT type="radio" name="q3" value="1495" id="Q_3">1495<br>
+			<INPUT type="radio" name="q3" value="1488" id="Q_3">1488<br>
+			<INPUT type="radio" name="q3" value="1489" id="Q_3">1489<br>
+			<INPUT type="radio" name="q3" value="1498" id="Q_3">1498<br>
+		4.Magna Carta was signed in the year?<br>
+			<INPUT type="radio" name="q4" value="1210" id="Q_4">1210<br>
+			<INPUT type="radio" name="q4" value="1220" id="Q_4">1220<br>
+			<INPUT type="radio" name="q4" value="1215" id="Q_4">1215<br>
+			<INPUT type="radio" name="q4" value="1225" id="Q_4">1225<br></h4>
+		<button type="button" onClick="fn_quiz()">Submit</button></div>
+	</form>
+    <!--footer-->
+    <div id="footer" style="font-family:Arial, Helvetica, sans-serif; text-align:center">
+    <h5>Department of History, St. Xaviers College &copy;</h5>
+    <h5>Designed by BscIT||2017 &copy;</h5>
+    </div>
+ </body>
+</html> 

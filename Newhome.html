@@ -1,0 +1,113 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta content="text/html"; charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="Newstyle.css">
+		<script src="jquery.js"></script>
+
+										<!-------------Slide show logic--------------->
+<script>
+	$(function(){
+		var slides= $('.slideShow>li');
+		var slideCount=0;
+		var totalSlides= slides.length;
+		var slideCache=[];
+		
+		(function preloader(){
+			if(slideCount < totalSlides){
+				//load images
+				slideCache[slideCount]= new Image();
+				slideCache[slideCount].src= slides.eq(slideCount).find('img').attr('src');
+				slideCache[slideCount].onload= function(){
+				slideCount++;
+				preloader();	
+				}
+				
+				
+			} else{
+				//run the show
+				slideCount=0;
+				SlideShow();
+				}
+			}());
+		
+		function SlideShow(){
+			//code here
+			slides.eq(slideCount).fadeIn(1000).delay(3000).fadeOut(1000, function(){
+				slideCount< totalSlides- 1 ? slideCount++ : slideCount= 0;
+				SlideShow();  
+				
+				});
+			}
+		
+		});
+</script>
+												<!--Styling the anchor tag-->
+<style>
+			a:link{
+					color:#00C;
+					text-decoration:blink;	
+				  }
+			a:visited{
+					color:#00C;
+					text-decoration:none;	
+				  }
+			a:hover{	
+					color:#F00;
+					text-decoration:underline;
+				  }
+</style>
+
+	<title>HOME||SXDH</title>
+</head>
+<body>
+<!--container-->
+<div id="container">
+	<!--header-->
+    <div id="header">
+    	<div id="logo"></div>
+        <div id="info"><h1>St. Xavier's College, Mumbai(Autonomous)</h1>
+        <h1 style="font-family:Macondo Swash Caps; font-size:36px">Department Of History</h1></div>
+        <div id="navbar">
+  				<ul>
+            		<li><a href="event.html" target="_self">Events</a></li>
+            		<li><a href="Quiz.html" target="_self">Quiz</a></li>
+                    <li><a href="info.html" target="_self">Info</a></li>
+            	</ul>
+		</div>
+    </div>
+    <!--content-->
+    <div id="content">
+    	<div id="banner">
+        	<div id="slideShowContainer">
+				<ul class="slideShow">
+    			<li><img src="10.jpeg"/></li>
+        		<li><img src="11.jpeg"/></li>
+		        <li><img src="14.jpeg"/></li>
+    			</ul>
+ 			</div> 
+        </div>
+        <div id="left" style="font-family:Annie Use Your Telescope">
+        <h1 style="text-align:center;text-decoration:underline">ABOUT US</h1>
+        <p style="text-align:center; font-size:32.99px">
+        We are a young and dynamic department. The crowd is small and the faculty is young too.You can say we are a small family in Xaviers. That said, we have some pretty great debates in the class that would blow your minds away. Anybody’s welcome to visit our class to observe this. We also visit those exotic historic locations as a part of our curriculum, an added advantage.
+        </p>
+        </div>
+        <div id="right" style="font-family:Marcellus SC">
+        <h1 style="text-align:center; text-decoration:underline">NOTICES</h1>
+        <ul style="text-align:center; font-size:37.50px">
+        	<li>Stay tuned for more info about the documentries</li>
+            <li>Check out facebook group</li>
+            <li>Click on the EVENTS link for info about the upcoming events!!</li>
+            <li>More field trips to be organised next semester</li>
+        </ul>    
+        </div>
+    </div>
+    <!--footer-->
+    <div id="footer" style="font-family:Arial, Helvetica, sans-serif; text-align:center">
+    <h5>Department of History, St. Xaviers College &copy;</h5>
+    <h5>Designed by BscIT||2017 &copy;</h5>
+    </div>
+</div>
+</body>
+</html>

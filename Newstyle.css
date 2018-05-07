@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Marcellus SC');
+@import url('https://fonts.googleapis.com/css?family=Macondo Swash Caps');
+@import url('https://fonts.googleapis.com/css?family=Annie Use Your Telescope');
+@import url('https://fonts.googleapis.com/css?family=Baumans');
+
+html , body{
+	background-image:url(1.jpg);
+	margin:auto;
+}
+#container{
+	width:100%;
+	height:100%;
+	margin:0, auto;
+}
+#header{
+	width:100%;
+	height:20%;
+	border-bottom:1px solid #630; background:#630;
+	text-align:center;
+	font-family:Marcellus SC;
+	/*text-decoration:underline;*/
+	font-size:16px;
+	color:#FFF;
+}
+#logo{
+	float:left; 
+	width:95px; 
+	height:95px; 
+	margin:10px;
+	background-image:url(logo1.png); 
+}
+#navbar{
+	height:25%;
+	clear:both;
+}
+#navbar ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+#navbar ul li{
+	padding:5px;
+	float:left;
+}
+#navbar ul li a{
+	font-size:28px;
+	/*float:left;*/
+	padding:0 0 0 300px;
+	display:block;
+}
+#banner{
+	background:inherit;
+	height:500px;
+	clear:both;
+}
+#slideShowContainer{
+	position:inherit;
+	width:700px;
+	height:481px;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	margin:auto;
+	border:1px solid #000;
+	box-shadow:0px 1px 20px #000;
+	border-radius:5px;
+	overflow:hidden;
+	/*clear:both;*/
+}
+.slideShow{
+	position:absolute;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.slideShow>li{
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#left{
+	float:left;
+	width:600px;
+	height:auto;
+	padding:20px;
+	background:#300;
+	border:8px solid #300; 
+	color:#FFF;
+}
+#right{
+	float:right;
+	width:600px;
+	height:auto;
+	padding:20px;
+	background:#300;
+	border:8px solid #300;
+	color:#FFF; 
+}
+#footer{
+	background:#000;
+	height:80px;
+	clear:both;
+	color:#FFF;
+}
+/*for the quiz page*/
+#form1{
+	background-color:#903;
+	color:#FF0;
+	border-bottom:1px solid #630;
+	background:#630;
+	font-size:20px;
+}
+#f2{
+	text-decoration:none;
+}
